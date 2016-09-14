@@ -317,7 +317,8 @@ public class SignUp {
 		frmSignUp.getContentPane().add(lbl_Banner, BorderLayout.NORTH);
 		frmSignUp.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{first_Name_Field, last_Name_Field, email_Field, SSN_Field, choice_Month,  choice_Day, choice_Year, choice_Gender, phone_Number_Field, user_Name_Field,  password_Field, password_Field_2, btnBrowse, btnCancel, btnSubmit}));
 		btnSubmit.addActionListener(new ActionListener() 
-		{  public void actionPerformed(ActionEvent r) 
+		{  @SuppressWarnings("unused")
+		public void actionPerformed(ActionEvent r) 
 			{
 			boolean ready = true;
 			if(email_Field.getText().toString().length()>12) //email must be at least 12 characters long; XXX@mail.xxx
@@ -346,6 +347,8 @@ public class SignUp {
 			{
 				pw2 += chars2[x];
 			}
+			
+			//I made all fields required, by the way. GIVE ME YOUR INFORMATION, USERS!
 				 if(user_Name_Field.getText().length()==0 || user_Name_Field.getText().length()<4)
 				{
 					 ready = false;System.out.println("2");
@@ -378,9 +381,11 @@ public class SignUp {
 					password_Field.setText("");
 					password_Field_2.setText("");
 				}
-				else if( (pw.matches("([0-9]+)([a-z]+)([A-Z]+)([!#$%&'*+,-./:;<=>?@^_`{|}~]+)")))
+				else if(false)//( pw.matches("([0-9]+)([a-z]+)([A-Z]+)([!#$%&'*+,-./:;<=>?@^_`{|}~]+)"))//the regex always returns false, no idea why.
+					//according to everything I can check, it should return true if the password has a lower and uppercase letter, a number, and a special character.
+					//it does not, and I dont have time to fix yet
 				{
-					//password checking disabled no idea why it won't work
+					
 					ready = false;System.out.println("8");
 					JOptionPane.showMessageDialog(frmSignUp, "Password requires a lowercase letter, uppercase letter, a number, and a special character ($%^&)");
 				}

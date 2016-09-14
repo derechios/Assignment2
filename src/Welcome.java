@@ -98,7 +98,7 @@ public class Welcome {
 		frmWelcomeScreen.setSize(500, 600);
 		frmWelcomeScreen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmWelcomeScreen.getContentPane().setLayout(null);
-		System.out.println("123aA!".matches("([0-9]+)([a-z]+)([A-Z]+)([@!#$%^&+=]+)"));
+		System.out.println("aaaaaaaaaaaaaaaA!#".matches("([0-9]+)([a-z]+)([A-Z]+)([!#$%&'*+,-./:;<=>?@^_`{|}~]+)"));
 		loginField = new JButton();
 		loginField.setBorder(null);
 		loginField.setBounds(434, 11, 50, 20);
