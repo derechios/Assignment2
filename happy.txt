@@ -1,0 +1,10 @@
+Readme 2016 Assignment 1
+Author: Liam Heaney
+
+Known Issues:
+All fields are required to be completed, not just Name, username, password, ect.
+Password does not check properly for Upper/lowercase letter, number and symbol. According to used regex it should work. It does not.
+There is no security checking on photo submission. I ran out of time.
+It looks awful. I am neither an artist nor graphic designer. Therefore, this is a feature.
+While fields will tell you the correct format if you get them wrong, they will not tell you until after you try. What a pain.
+There is no log out button. You are trapped in the game. Forever.
